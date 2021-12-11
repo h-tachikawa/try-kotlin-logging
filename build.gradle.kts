@@ -30,8 +30,11 @@ application {
     mainClass.set("MainKt")
 }
 
+// Gradle が使用する Java のバージョンを指定する
+// @see https://docs.gradle.org/current/userguide/toolchains.html
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(11))
+        languageVersion.set(JavaLanguageVersion.of(11)) // Java11 を使用する
+        vendor.set(org.gradle.jvm.toolchain.JvmVendorSpec.AMAZON) // Amazon Corretto を使用する
     }
 }

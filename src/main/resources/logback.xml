@@ -1,4 +1,5 @@
 <configuration>
+    <!--  どこにどんなレイアウトで出力するか  -->
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
         <file>myApp.log</file>
         <encoder>
@@ -12,7 +13,8 @@
         </encoder>
     </appender>
 
-    <root level="debug">
+    <!--  Logger で指定されないものについて、どのレベル「以上」でどの Appender に出力するか  -->
+    <root level="debug"> <!--  debug 以上のレベルでこの設定が使用される(debug のみではないことに注意)  -->
         <appender-ref ref="FILE"/>
         <appender-ref ref="STDOUT"/>
     </root>
