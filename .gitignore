@@ -23,5 +23,9 @@
 hs_err_pid*
 replay_pid*
 
-.idea
+.idea/*
+.gradle/*
+build/*
+.env
+.envrc
 myApp.log
